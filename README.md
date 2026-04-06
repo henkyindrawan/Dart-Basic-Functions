@@ -6,47 +6,22 @@
 
 
 
-
 void main() {
-    sapaNama();
-    print(hitungLuasPersegi());
-    print(hitungDiskon(50000,20));
-    sapa();
-    getSapaan();
-    sapaNamaA("NoeL");
-    print(getSapaanNama("NoeL"));
-    kalkulatorLuasPersegi();
-    print(getLuasPersegi());
-    hitungDanCetakLuasPersegi(7.0);
-    print(hitungLuasPersegii(8.0));
-  
-}
-
-// A. Topik Menyapa!
-void sapaNama() {
-  print("Halo, Noel! Senang bertemu denganmu.");
-}
-
-// B. Fungsi Menghitung Luas Persegi
-int hitungLuasPersegi() {
-  return 4 * 4;
-}
-
-// C. Fungsi Menghitung Diskon
-double hitungDiskon(double harga, double persenDiskon) {
-  double diskon = harga * (persenDiskon / 100);
-  return harga - diskon;
+  demoMenyapa();
+  demoLuasPersegi();
+  demoDiskon();
 }
 
 
+//  4 Topik Menyapa
 //Function without parameter & without return Menyapa
 void sapa() {
-  print("Halo, Apa Kabar!");
+  print("Halo, Apa Kabar! NoeL");
 }
 
 //Function without Parameter & with Return Menyapa
 String getSapaan() {
-  return "Halo, Iqbal!";
+  return "Halo, NoeL!";
 }
 
 //Function with Parameter & without Return Menyapa
@@ -59,6 +34,8 @@ String getSapaanNama(String name) {
   return "Halo, $name!";
 }
 
+
+// 4 Topik Luas Persegi
 //Function without parameter & without return Kalkulator Luas Persegi
 void kalkulatorLuasPersegi() {
   double sisi = 5.0;
@@ -82,4 +59,61 @@ void hitungDanCetakLuasPersegi(double sisi) {
 double hitungLuasPersegii(double sisi) {
   return sisi * sisi;
 }
+
+//4 Topik Diskon
+// Fungsi diskon 1: tanpa parameter & tanpa return
+void cetakDiskonDefault() {
+  double harga = 100000;
+  double persen = 10;
+  double diskon = harga * (persen / 100);
+  double hasil = harga - diskon;
+  print("Diskon default: Harga $harga, diskon $persen%, akhir $hasil");
+}
+
+// Fungsi diskon 2: tanpa parameter & dengan return
+double getDiskonDefault() {
+  double harga = 100000;
+  double persen = 10;
+  double diskon = harga * (persen / 100);
+  return harga - diskon;
+}
+
+// Fungsi diskon 3: dengan parameter & tanpa return
+void cetakDiskon(double harga, double persen) {
+  double diskon = harga * (persen / 100);
+  double hasil = harga - diskon;
+  print("Harga $harga, diskon $persen%, akhir $hasil");
+}
+
+// Fungsi diskon 4: dengan parameter & dengan return
+double hitungDiskonBaru(double harga, double persen) {
+  double diskon = harga * (persen / 100);
+  return harga - diskon;
+}
+
+// Topik Fungsi Menyapa
+void demoMenyapa() {
+  sapa();
+  print(getSapaan());
+  sapaNamaA("NoeL");
+  print(getSapaanNama("NoeL"));
+}
+
+// Topik Fungsi Luas Persegi
+void demoLuasPersegi() {
+  kalkulatorLuasPersegi();
+  print(getLuasPersegi());
+  hitungDanCetakLuasPersegi(7.0);
+  print(hitungLuasPersegii(8.0));
+}
+
+// Topik Fungsi Diskon
+void demoDiskon() {
+  cetakDiskonDefault();
+  print(getDiskonDefault());
+  cetakDiskon(50000, 20);
+  print(hitungDiskonBaru(50000, 20));
+}
+
+
 
